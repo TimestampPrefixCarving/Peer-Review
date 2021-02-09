@@ -1185,10 +1185,18 @@ def main(timestamps, fileLoc, partitionStart, bSize, md5):
 
 
 
+    #WORKS ON WINDOWS
     f = open(fileLoc, "rb+")
 
     #Getting mmap of file
     mapF = mmap.mmap(f.fileno(), 0)
+
+
+    #IF MAC OR HAVING PROBLEMS, TRY:
+    #f = open(fileLoc, "rb")
+    #mapF = mmap.mmap(f.fileno(), 0, prot=0x01)
+
+
 
     fileSize = mapF.size()
 
