@@ -74,3 +74,13 @@ For example, if we wanted to search for inodes on an assumed Ext4 image, we woul
 
 python ext4Parser.py cPTS.txt "C:\Disk Images\Samsung\SamsungS8.dd" 221872128 4096
 
+
+Near line 1189 you may encounter a problem with memory mapping.  The uploaded file was tested on Windows, but is known to have issues on Mac.  If you encounter such issues, try replacing line 1189:
+
+f = open(fileLoc, "rb+") -> f = open(fileLoc, "rb")
+
+and line 1192:
+
+mapF = mmap.mmap(f.fileno(), 0) -> mapF = mmap.mmap(f.fileno(), 0, prot=0x01)
+
+The directions are also in the comments of the code.
