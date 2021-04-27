@@ -46,7 +46,7 @@ Optional arguments include:
 
 For example, if we wanted to search for timestamps of length 8, where we had a search window in front of each timestamp of 24 bytes, required a minimum of 3 total matching timestamps (of 4), and were only considering the 3 most significant bytes of each timestamp:
 
-cPTS.exe dfr-13-ntfs.dd 8 24 3 -a 3
+cPTS.exe dfr-13-ntfs.dd 8 24 3 -p 3
 
 # How to run the NTFSparser.py tool:
 
