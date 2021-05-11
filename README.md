@@ -72,7 +72,7 @@ This flag will attempt to hash the file contents of identified inodes.
 
 For example, if we wanted to search for inodes on an assumed Ext4 image, we would run the following:
 
-python ext4Parser.py cPTS.txt "C:\Disk Images\Samsung\SamsungS8.dd" 221872128 4096
+python ext4Parser.py cPTS.txt "C:\Disk Images\Samsung\SamsungS8.dd" 225968128 4096
 
 
 Near line 1189 you may encounter a problem with memory mapping.  The uploaded file was tested on Windows, but is known to have issues on Mac.  If you encounter such issues, try replacing line 1189:
