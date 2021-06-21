@@ -36,11 +36,11 @@ From this point, you can either use the NTFS MFT record parser (NTFSparser.py) o
 
 Once an executable cPTS.exe is compiled, the program takes the following mandatory arguments:
 
-<disk image location> <timestamp size> <search threshold> <number of timestamps that should be the same>
+(disk image location) (timestamp size) (search threshold) (number of timestamps that should be the same)
   
 Optional arguments include:
 
-<min date> <max date> <-t> <-p>
+(min date) (max date) (-t) (-p)
   
 -t is for limiting matches between NTFS dates and -p is for prefix-based timestamp matching.  Follow -p with the length of the most signficant number of bytes you wish to match for the timestamps.
 
@@ -52,7 +52,7 @@ cPTS.exe dfr-13-ntfs.dd 8 24 3 -p 3
 
 Assuming Python 3 is installed (and all required dependencies found within the file are installed) the program takes the following arguments:
 
-<location of potential timestamp list> <disk image location>
+(location of potential timestamp list) (disk image location)
 
 For example, if we wanted to search for MFT records on an assumed NTFS image, we would run the following:
 
@@ -62,11 +62,11 @@ python NTFSParser.py cPTS.txt dfr-13-ntfs.dd
 
 Assuming Python 3 is installed (and all required dependencies found within the file are installed) the program takes the following mandatory arguments:
 
-<location of potential timestamp list> <disk image location> <byte offset to beginning of target partition> <assumed size of Ext block in bytess>
+(location of potential timestamp list) (disk image location) (byte offset to beginning of target partition) (assumed size of Ext block in bytes)
 
 Optional arguments include:
 
-<-m>
+(-m)
 
 This flag will attempt to hash the file contents of identified inodes.
 
